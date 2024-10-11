@@ -18,7 +18,7 @@ class Truck extends Vehicle implements AbleToTow {
   year: number;
   weight: number;
   topSpeed: number;
-  wheels: Wheel[];  //HOW DO I DECLARE THIS WHAT DO I WRITE  
+  wheels: Wheel[];  
   towingCapacity: number;
 
 
@@ -58,17 +58,17 @@ class Truck extends Vehicle implements AbleToTow {
 
   // DONE: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
-    // TODO: Get the make and model of the vehicle if it exists
+    // DONE: Get the make and model of the vehicle if it exists
     if (vehicle.make && vehicle.model) {
       const make = vehicle.make;
       const model = vehicle.model;
     }
-    // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
+    // DONE: Check if the vehicle's weight is less than or equal to the truck's towing capacity
     if (vehicle.weight <= truck.towingCapacity){
       // TODO: If it is, log that the vehicle is being towed
       console.log(`Your ${make} ${model} is being towed!`);
     } else {
-      // TODO: If it is not, log that the vehicle is too heavy to be towed
+      // DONE: If it is not, log that the vehicle is too heavy to be towed
       console.log(`Your ${make} ${model} is too heavy and cannot be towed, sorry.`);
     }
   }
