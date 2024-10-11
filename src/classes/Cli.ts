@@ -7,15 +7,14 @@ import Wheel from "./Wheel.js";
 
 // define the Cli class
 class Cli {
-  // TODO: update the vehicles property to accept Truck and Motorbike objects as well
-  // TODO: You will need to use the Union operator to define additional types for the array
-  // TODO: See the AbleToTow interface for an example of how to use the Union operator
-  vehicles: (Car)[];
+  // DONE: update the vehicles property to accept Truck and Motorbike objects as well (You will need to use the Union operator to define additional types for the array)
+        // hint: See the AbleToTow interface for an example of how to use the Union operator
+  vehicles: (Truck | Motorbike | Car)[];
   selectedVehicleVin: string | undefined;
   exit: boolean = false;
 
-  // TODO: Update the constructor to accept Truck and Motorbike objects as well
-  constructor(vehicles: (Car)[]) {
+  // DONE: Update the constructor to accept Truck and Motorbike objects as well
+  constructor(vehicles: (Truck | Motorbike | Car)[]) {
     this.vehicles = vehicles;
   }
 
@@ -61,7 +60,7 @@ class Cli {
           name: 'vehicleType',
           message: 'Select a vehicle type',
           // TODO: Update the choices array to include Truck and Motorbike
-          choices: ['Car'],
+          choices: ['Truck', 'Motorbike', 'Car'],
         },
       ])
       .then((answers) => {
@@ -169,8 +168,27 @@ class Cli {
           message: 'Enter Towing Capacity',
         },
       ])
-      .then((answers) => {
+      .then((answers: {
+        color: string,
+        make: string,
+        model: string,
+        year: string,
+        weight: string,
+        topSpeed: string,
+        towingCapacity: string}) => {
+
         // TODO: Use the answers object to pass the required properties to the Truck constructor
+        const newTruck = new Truck(
+          Cli.generateVin(),
+          answers.color,
+          answers.make,
+          answers.model,
+          +answers.year,
+          +answers.weight,
+          +answers.topSpeed,
+          [],
+          +answers.towingCapacity
+        )
         // TODO: push the truck to the vehicles array
         // TODO: set the selectedVehicleVin to the vin of the truck
         // TODO: perform actions on the truck
@@ -288,6 +306,10 @@ class Cli {
         },
       ])
       .then((answers) => {
+        // const selectedVehicle = this.vehicles.find((vehicleObj) => {
+        //   if (vehicleObj.vin === this.selectedVehicleVin) }
+        //   this.vehicles[i].printDetails();
+        // });
         // perform the selected action
         if (answers.action === 'Print details') {
           // find the selected vehicle and print its details

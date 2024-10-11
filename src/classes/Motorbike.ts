@@ -43,6 +43,7 @@ class Motorbike extends Vehicle {
     if (wheels.length !== 2) {
       this.wheels = [new Wheel(), new Wheel()];
     }
+  }
     
     // TODO: Implement the wheelie method
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
@@ -51,8 +52,12 @@ class Motorbike extends Vehicle {
     // TODO: The method should call the printDetails method of the parent class
     // TODO: The method should log the details of the Motorbike
     // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
+    override printDetails(): void {
+      super.printDetails();
 
-  }
+      console.log('something else');
+    }
+
 
 }
 

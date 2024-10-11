@@ -18,7 +18,7 @@ class Truck extends Vehicle implements AbleToTow {
   year: number;
   weight: number;
   topSpeed: number;
-  wheels: Wheel[];  
+  wheels: Wheel[];
   towingCapacity: number;
 
 
@@ -31,11 +31,21 @@ class Truck extends Vehicle implements AbleToTow {
     year: number,
     weight: number,
     topSpeed: number,
-    wheels: String[],
+    wheels: Wheel[],
     towingCapacity: number
   ) {
     // DONE: The constructor should call the constructor of the parent class, Vehicle
     super(); //INITIALIZING PARENT'S PROPERTIES AND METHODS
+
+    // DONE: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
+    if (!wheels.length) {
+      const wheel1 = new Wheel();
+      const wheel2 = new Wheel();
+      const wheel3 = new Wheel();
+      const wheel4 = new Wheel();
+
+      wheels.push(wheel1, wheel2, wheel3, wheel4);
+    }
 
     // DONE: The constructor should initialize the properties of the Truck class
     this.vin = vin;
@@ -45,13 +55,9 @@ class Truck extends Vehicle implements AbleToTow {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
-    this.wheels = [];
+    this.wheels = wheels;
     this.towingCapacity = towingCapacity;
 
-    // DONE: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
-    if (wheels.length !== 4) {
-      this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
-    }
   }
 
 
@@ -64,7 +70,7 @@ class Truck extends Vehicle implements AbleToTow {
       const model = vehicle.model;
     }
     // DONE: Check if the vehicle's weight is less than or equal to the truck's towing capacity
-    if (vehicle.weight <= truck.towingCapacity){
+    if (vehicle.weight <= truck.towingCapacity) {
       // TODO: If it is, log that the vehicle is being towed
       console.log(`Your ${make} ${model} is being towed!`);
     } else {
