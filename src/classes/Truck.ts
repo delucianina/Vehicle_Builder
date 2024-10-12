@@ -39,10 +39,10 @@ class Truck extends Vehicle implements AbleToTow {
 
     // DONE: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
     if (!wheels.length) {
-      const wheel1 = new Wheel();
-      const wheel2 = new Wheel();
-      const wheel3 = new Wheel();
-      const wheel4 = new Wheel();
+      const wheel1 = new Wheel(18, 'Goodyear');
+      const wheel2 = new Wheel(18, 'Goodyear');
+      const wheel3 = new Wheel(18, 'Goodyear');
+      const wheel4 = new Wheel(18, 'Goodyear');
 
       wheels.push(wheel1, wheel2, wheel3, wheel4);
     }
