@@ -13,6 +13,22 @@ This is an application that allows a user to create a vehicle, specify certain p
 To run the app, download the repository from GitHub and run the index.ts file in your computer terminal. 
 ## Usage
 The program is run entirely from the terminal. Run the index.ts file, found in the 'src' folder, to initialize the application. Then follow the application's prompts. <br>
+First, you can either create a new vehicle or choose from a list of existing vehicles. If you chose to create a new vehicle, you can choose if you'd like to create a truck, car or motorbike (there are one of each saved as presets if you chose to use a premade vehicle). Once you have selected or made a vehicle, choose form an assortment of actions: 
+- print vehicle details
+- start the vehicle
+- accelerate by 5 mph
+- decelerate by 5mph
+- stop the vdehicle
+- turn right
+- turn left
+- reverse the vehicle
+- tow (only allowable with "Truck" type vehicles)
+- perform a wheelie (only allowable with "Motorbike" type vehicles)
+- Select another vehicle (broken; will be fixed in future versions)
+- exit program (broken; will be fixed in future versions. For now, input ^C to leave program)
+
+  There are known bugs in this program. It is a work in progress!
+  Fine a video walkthrough of the application's currentfunctionality here: https://youtu.be/OXCXnBNM5c8 
 ## Credits
 I created this app using Inquirer to take user input. 
 ## License 
