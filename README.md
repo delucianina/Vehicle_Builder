@@ -28,14 +28,14 @@ First, you can either create a new vehicle or choose from a list of existing veh
 - exit program (broken; will be fixed in future versions. For now, input ^C to leave program)
 
 There are known bugs in this program. It is a work in progress!
-Fine a video walkthrough of the application's currentfunctionality here: https://youtu.be/OXCXnBNM5c8 
+Find a video walkthrough of the application's current functionality here: https://youtu.be/OXCXnBNM5c8 
 
 ## Credits
 I created this app using Inquirer to take user input. 
 ## License 
   This project is licensed under the MIT No Attribution License license. <br>For more information, please visit: [Link to more info about MIT No Attribution License](https://opensource.org/license/mit-0)
 ## Testing
-I tested it myself, but feel free to test it as well! 
+I tested it myself, but feel free to test it as well! There are a few known bugs in the application (listed in the [usage section](#usage)). 
 ## Questions
 Link to developer GitHub profile: https://github.com/delucianina  
  
