@@ -70,19 +70,32 @@ class Truck extends Vehicle implements AbleToTow {
       const model = vehicle.model;
     }
     // DONE: Check if the vehicle's weight is less than or equal to the truck's towing capacity
-    if (vehicle.weight <= truck.towingCapacity) {
-      // TODO: If it is, log that the vehicle is being towed
-      console.log(`Your ${make} ${model} is being towed!`);
+    if (vehicle.weight <= this.towingCapacity) {
+      // DONE: If it is, log that the vehicle is being towed
+      console.log(`Your ${vehicle.make} ${vehicle.model} is being towed!`);
     } else {
       // DONE: If it is not, log that the vehicle is too heavy to be towed
-      console.log(`Your ${make} ${model} is too heavy and cannot be towed, sorry.`);
+      console.log(`Your ${vehicle.make} ${vehicle.model} is too heavy and cannot be towed.`);
     }
   }
 
   // TODO: Override the printDetails method from the Vehicle class
-  // TODO: The method should call the printDetails method of the parent class
-  // TODO: The method should log the details of the Truck
-  // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
+  override printDetails(): void {
+    // DONE: The method should call the printDetails method of the parent class
+    super.printDetails();
+
+    // DONE: The method should log the details of the Truck
+    // DONE: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
+    console.log(`VIN: ${this.vin}`);
+    console.log(`Make: ${this.make}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`Year: ${this.year}`);
+    console.log(`Weight: ${this.weight} lbs`);
+    console.log(`Top Speed: ${this.topSpeed} mph`);
+    console.log(`Color: ${this.color}`);
+    console.log(`towingCapacity: ${this.towingCapacity}`);
+    console.log(`Wheels: ${this.wheels}`);
+  }
 }
 
 // Export the Truck class as the default export
