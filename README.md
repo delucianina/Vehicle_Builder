@@ -27,8 +27,9 @@ First, you can either create a new vehicle or choose from a list of existing veh
 - Select another vehicle (broken; will be fixed in future versions)
 - exit program (broken; will be fixed in future versions. For now, input ^C to leave program)
 
-  There are known bugs in this program. It is a work in progress!
-  Fine a video walkthrough of the application's currentfunctionality here: https://youtu.be/OXCXnBNM5c8 
+There are known bugs in this program. It is a work in progress!
+Fine a video walkthrough of the application's currentfunctionality here: https://youtu.be/OXCXnBNM5c8 
+
 ## Credits
 I created this app using Inquirer to take user input. 
 ## License 
